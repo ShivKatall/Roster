@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RosterAppViewController : UIViewController <UITableViewDataSource>
+@interface RosterAppViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *studentList;
 @property (nonatomic, strong) NSMutableArray *teacherList;

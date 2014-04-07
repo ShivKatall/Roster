@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
     self.rosterTableView.dataSource = self;
+    self.rosterTableView.delegate = self;
+    
     self.studentList = [[NSMutableArray alloc] init];
     self.teacherList = [[NSMutableArray alloc] init];
     
@@ -96,6 +98,7 @@
     }
 }
 
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *indexPath = [self.rosterTableView indexPathForSelectedRow];
@@ -113,6 +116,22 @@
             destination.person = person;
         }
     }
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"Teachers";
+    } else {
+        return @"Students";
+    }
+}
+
+#pragma mark - UITableViewDelegate Methods
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
