@@ -21,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.rosterTableView.dataSource = self;
     self.rosterTableView.delegate = self;
     
@@ -57,7 +58,7 @@
     taylorPotter.lastName = @"Potter";
     [self.studentList addObject:taylorPotter];
     
-    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Photos" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil     otherButtonTitles:@"Take Photo", @"Choose Photo", nil];
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
@@ -103,18 +104,13 @@
 {
     NSIndexPath *indexPath = [self.rosterTableView indexPathForSelectedRow];
     
-    if (indexPath.section == 0)
-    {   if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
-            DetailViewController *destination = segue.destinationViewController;
-            Person *person = [self.teacherList objectAtIndex:[self.rosterTableView indexPathForSelectedRow].row];
-            destination.person = person;
-        }
-    } else {
-        if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
-            DetailViewController *destination = segue.destinationViewController;
-            Person *person = [self.studentList objectAtIndex:[self.rosterTableView indexPathForSelectedRow].row];
-            destination.person = person;
-        }
+    if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
+        DetailViewController *destination = segue.destinationViewController;
+            if (indexPath.section == 0) {
+                destination.person =[self.teacherList objectAtIndex:[self.rosterTableView indexPathForSelectedRow].row];
+            } else {
+                destination.person = [self.studentList objectAtIndex:[self.rosterTableView indexPathForSelectedRow].row];
+            }
     }
 }
 
