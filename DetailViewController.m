@@ -78,33 +78,39 @@
 
 #pragma mark - UIImagePickerControllerDelegate methods
 
+- (void)saveImageToPhotoLibrary
+{
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    
+    if ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusAuthorized || [ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusNotDetermined) {
+        
+        [assetsLibrary writeImageToSavedPhotosAlbum:_imageView.image.CGImage
+                                        orientation:ALAssetOrientationUp
+                                    completionBlock:^(NSURL *assetURL, NSError *error) {
+                                        if (error) {
+                                            NSLog(@"Error Saving Image : %@", error.localizedDescription);
+                                        }
+                                    }];
+    } else if ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusDenied || [ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusRestricted){
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Cannot Save Photo"
+                                                            message:@"Authorization Status Not Granted"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    } else {
+        NSLog(@"Authorization Not Determined");
+    }
+}
+
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     self.person.image = [info objectForKey:UIImagePickerControllerEditedImage];
     _imageView.image = self.person.image;
     [self dismissViewControllerAnimated:YES completion:^{
         NSLog(@"Completed");
-        
-        ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
-        
-        if ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusAuthorized || [ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusNotDetermined) {
-            
-            [assetsLibrary writeImageToSavedPhotosAlbum:_imageView.image.CGImage
-                                            orientation:ALAssetOrientationUp
-                                        completionBlock:^(NSURL *assetURL, NSError *error) {
-                                            if (error) {
-                                                NSLog(@"Error Saving Image : %@", error.localizedDescription);
-                                            }
-                                        }];
-        } else if ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusDenied || [ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusRestricted){
-            
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Cannot Save Photo"
-                                                                message:@"Authorization Status Not Granted"
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
-        } else {
-            NSLog(@"Authorization Not Determined");
+        if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+            [self saveImageToPhotoLibrary];
         }
     }];
 }

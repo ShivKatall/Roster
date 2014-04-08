@@ -59,6 +59,12 @@
     taylorPotter.lastName = @"Potter";
     [self.studentList addObject:taylorPotter];
     
+    NSSortDescriptor *lastNameSortDescriptor = [[NSSortDescriptor alloc]
+                                                initWithKey:@"lastName" ascending:YES selector:@selector(localizedStandardCompare:)];
+    
+    self.teacherList = [[self.teacherList sortedArrayUsingDescriptors:@[lastNameSortDescriptor]]mutableCopy];
+    self.studentList = [[self.studentList sortedArrayUsingDescriptors:@[lastNameSortDescriptor]]mutableCopy];
+    
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
