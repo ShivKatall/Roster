@@ -13,5 +13,6 @@
 @property NSString *personType;
 @property NSString *firstName;
 @property NSString *lastName;
+@property UIImage *image;
 
 @end

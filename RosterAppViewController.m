@@ -58,7 +58,6 @@
     taylorPotter.lastName = @"Potter";
     [self.studentList addObject:taylorPotter];
     
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Photos" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil     otherButtonTitles:@"Take Photo", @"Choose Photo", nil];
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
@@ -107,7 +106,7 @@
     if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
         DetailViewController *destination = segue.destinationViewController;
             if (indexPath.section == 0) {
-                destination.person =[self.teacherList objectAtIndex:[self.rosterTableView indexPathForSelectedRow].row];
+                destination.person = [self.teacherList objectAtIndex:[self.rosterTableView indexPathForSelectedRow].row];
             } else {
                 destination.person = [self.studentList objectAtIndex:[self.rosterTableView indexPathForSelectedRow].row];
             }
