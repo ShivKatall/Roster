@@ -31,6 +31,7 @@
     self.typeLabel.text = self.person.personType;
     self.firstNameLabel.text = self.person.firstName;
     self.lastNameLabel.text = self.person.lastName;
+    self.imageView.image = self.person.image;
 }
 
 - (void)didReceiveMemoryWarning
