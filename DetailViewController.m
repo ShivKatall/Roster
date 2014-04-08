@@ -80,8 +80,8 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    _imageView.image = [info objectForKey:UIImagePickerControllerEditedImage];
-                        
+    self.person.image = [info objectForKey:UIImagePickerControllerEditedImage];
+    _imageView.image = self.person.image;
     [self dismissViewControllerAnimated:YES completion:^{
         NSLog(@"Completed");
         

@@ -9,6 +9,7 @@
 #import "RosterAppViewController.h"
 #import "Person.h"
 #import "DetailViewController.h"
+#import "PersonCell.h"
 
 @interface RosterAppViewController ()
 
@@ -81,19 +82,30 @@
     // Dispose of any resources that can be recreated.
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.rosterTableView reloadData];
+}
+
+-(PersonCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0)
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personCell" forIndexPath:indexPath];
+        PersonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personCell" forIndexPath:indexPath];
         Person *person = [self.teacherList objectAtIndex:indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", person.firstName, person.lastName ];
+        cell.personLabel.text = [NSString stringWithFormat:@"%@ %@", person.firstName, person.lastName ];
+        cell.personImageView.layer.cornerRadius = 22;
+        cell.personImageView.layer.masksToBounds = YES;
+        cell.personImageView.image = person.image;
         return cell;
     } else
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personCell" forIndexPath:indexPath];
+        PersonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personCell" forIndexPath:indexPath];
         Person *person = [self.studentList objectAtIndex:indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", person.firstName, person.lastName ];
+        cell.personLabel.text = [NSString stringWithFormat:@"%@ %@", person.firstName, person.lastName ];
+        cell.personImageView.layer.cornerRadius = 22;
+        cell.personImageView.layer.masksToBounds = YES;
+        cell.personImageView.image = person.image;
         return cell;
     }
 }
