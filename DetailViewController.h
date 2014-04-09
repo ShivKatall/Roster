@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
+#import "DataSource.h"
 
 @interface DetailViewController : UIViewController
 
 @property (nonatomic, weak) Person *person;
+@property (nonatomic, weak ) DataSource *dataSource;
+
 
 @end

@@ -9,14 +9,16 @@
 #import "DetailViewController.h"
 #import "Person.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "DataSource.h"
 
 
+@interface DetailViewController () <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextFieldDelegate>
 
-@interface DetailViewController () <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *lastNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *firstNameField;
+
+@property (weak, nonatomic) IBOutlet UITextField *lastNameField;
+
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) UIActionSheet *myActionSheet;
 
@@ -28,10 +30,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.typeLabel.text = self.person.personType;
-    self.firstNameLabel.text = self.person.firstName;
-    self.lastNameLabel.text = self.person.lastName;
+    self.firstNameField.text = self.person.firstName;
+    self.lastNameField.text = self.person.lastName;
     self.imageView.image = self.person.image;
+    
+    self.firstNameField.delegate = self;
+    self.lastNameField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +54,22 @@
     }
     
     [self.myActionSheet showInView:self.view];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.person.firstName = self.firstNameField.text;
+    self.person.lastName = self.lastNameField.text;
+    
+    [self.dataSource save];
 }
 
 #pragma mark - UIActionSheetDelegate methods
@@ -110,6 +130,7 @@
     _imageView.image = self.person.image;
     [self dismissViewControllerAnimated:YES completion:^{
         NSLog(@"Completed");
+        [[DataSource sharedData] save];
         if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
             [self saveImageToPhotoLibrary];
         }

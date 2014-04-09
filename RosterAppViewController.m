@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     
-    _dataSource = [[DataSource alloc] initWithStudentsAndTeachers];
+    _dataSource = [DataSource sharedData];
     
     self.rosterTableView.dataSource = _dataSource;
     self.rosterTableView.delegate = self;
@@ -50,6 +50,7 @@
     
     if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
         DetailViewController *destination = segue.destinationViewController;
+        destination.dataSource = self.dataSource;
             if (indexPath.section == 0) {
                 destination.person = [_dataSource.teacherList objectAtIndex:[self.rosterTableView indexPathForSelectedRow].row];
             } else {

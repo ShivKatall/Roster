@@ -13,7 +13,10 @@
 @property (nonatomic, strong) NSMutableArray *studentList;
 @property (nonatomic, strong) NSMutableArray *teacherList;
 
++(DataSource *)sharedData;
+
 -(instancetype)initWithStudentsAndTeachers;
 -(void)sortByLastName;
+-(void)save;
 
 @end
