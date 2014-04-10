@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+@interface Person : NSObject <NSCoding>
 
 @property NSString *personType;
 @property NSString *firstName;
 @property NSString *lastName;
+@property UIImage *image;
 
 @end
