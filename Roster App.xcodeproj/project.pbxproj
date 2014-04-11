@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D3AB24618F7423000A64F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3AB23118F7423000A64F1E /* Main.storyboard */; };
+		3D3AB24718F7423000A64F1E /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AB23418F7423000A64F1E /* DataSource.m */; };
+		3D3AB24818F7423000A64F1E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AB23518F7423000A64F1E /* DetailViewController.m */; };
+		3D3AB24918F7423000A64F1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D3AB23718F7423000A64F1E /* InfoPlist.strings */; };
+		3D3AB24A18F7423000A64F1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D3AB23918F7423000A64F1E /* Images.xcassets */; };
+		3D3AB24B18F7423000A64F1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AB23A18F7423000A64F1E /* main.m */; };
+		3D3AB24C18F7423000A64F1E /* PeopleRoster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3AB23B18F7423000A64F1E /* PeopleRoster.plist */; };
+		3D3AB24D18F7423000A64F1E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AB23D18F7423000A64F1E /* Person.m */; };
+		3D3AB24E18F7423000A64F1E /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AB23F18F7423000A64F1E /* PersonCell.m */; };
+		3D3AB24F18F7423000A64F1E /* Roster App-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3AB24018F7423000A64F1E /* Roster App-Info.plist */; };
+		3D3AB25018F7423000A64F1E /* RosterAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AB24318F7423000A64F1E /* RosterAppAppDelegate.m */; };
+		3D3AB25118F7423000A64F1E /* RosterAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AB24518F7423000A64F1E /* RosterAppViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D943B1018F325260099BA15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D943AE218F325260099BA15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D943AE918F325260099BA15;
+			remoteInfo = "Roster App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D3AB23218F7423000A64F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		3D3AB23318F7423000A64F1E /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = "../../../../Downloads/Roster-master/DataSource.h"; sourceTree = "<group>"; };
+		3D3AB23418F7423000A64F1E /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = "../../../../Downloads/Roster-master/DataSource.m"; sourceTree = "<group>"; };
+		3D3AB23518F7423000A64F1E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = "../../../../Downloads/Roster-master/DetailViewController.m"; sourceTree = "<group>"; };
+		3D3AB23818F7423000A64F1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		3D3AB23918F7423000A64F1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		3D3AB23A18F7423000A64F1E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "../../../../Downloads/Roster-master/main.m"; sourceTree = "<group>"; };
+		3D3AB23B18F7423000A64F1E /* PeopleRoster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PeopleRoster.plist; path = ../PeopleRoster.plist; sourceTree = "<group>"; };
+		3D3AB23C18F7423000A64F1E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = "../../../../Downloads/Roster-master/Person.h"; sourceTree = "<group>"; };
+		3D3AB23D18F7423000A64F1E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = "../../../../Downloads/Roster-master/Person.m"; sourceTree = "<group>"; };
+		3D3AB23E18F7423000A64F1E /* PersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonCell.h; path = "../../../../Downloads/Roster-master/PersonCell.h"; sourceTree = "<group>"; };
+		3D3AB23F18F7423000A64F1E /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonCell.m; path = "../../../../Downloads/Roster-master/PersonCell.m"; sourceTree = "<group>"; };
+		3D3AB24018F7423000A64F1E /* Roster App-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Roster App-Info.plist"; path = "../Roster App-Info.plist"; sourceTree = "<group>"; };
+		3D3AB24118F7423000A64F1E /* Roster App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Roster App-Prefix.pch"; path = "../Roster App-Prefix.pch"; sourceTree = "<group>"; };
+		3D3AB24218F7423000A64F1E /* RosterAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RosterAppAppDelegate.h; path = "../../../../Downloads/Roster-master/RosterAppAppDelegate.h"; sourceTree = "<group>"; };
+		3D3AB24318F7423000A64F1E /* RosterAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RosterAppAppDelegate.m; path = "../../../../Downloads/Roster-master/RosterAppAppDelegate.m"; sourceTree = "<group>"; };
+		3D3AB24418F7423000A64F1E /* RosterAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RosterAppViewController.h; path = "../../../../Downloads/Roster-master/RosterAppViewController.h"; sourceTree = "<group>"; };
+		3D3AB24518F7423000A64F1E /* RosterAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RosterAppViewController.m; path = "../../../../Downloads/Roster-master/RosterAppViewController.m"; sourceTree = "<group>"; };
+		3D3AB25218F7429100A64F1E /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ../../../../Downloads/DetailViewController.h; sourceTree = "<group>"; };
+		3D943AEA18F325260099BA15 /* Roster App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Roster App.app"; path = "/Users/colebratcher/Documents/Learning/Code Fellows/Roster App/build/Debug-iphoneos/Roster App.app"; sourceTree = "<absolute>"; };
+		3D943B0B18F325260099BA15 /* Roster AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Roster AppTests.xctest"; path = "/Users/colebratcher/Documents/Learning/Code Fellows/Roster App/build/Debug-iphoneos/Roster AppTests.xctest"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D943AE718F325260099BA15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D943B0818F325260099BA15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D3AB23018F7423000A64F1E /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base.lproj;
+			path = "../../../../Downloads/Roster-master/Base.lproj";
+			sourceTree = "<group>";
+		};
+		3D3AB23618F7423000A64F1E /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				3D3AB24118F7423000A64F1E /* Roster App-Prefix.pch */,
+				3D3AB23718F7423000A64F1E /* InfoPlist.strings */,
+				3D3AB24018F7423000A64F1E /* Roster App-Info.plist */,
+				3D3AB23B18F7423000A64F1E /* PeopleRoster.plist */,
+				3D3AB23918F7423000A64F1E /* Images.xcassets */,
+			);
+			name = en.lproj;
+			path = "../../../../Downloads/Roster-master/en.lproj";
+			sourceTree = "<group>";
+		};
+		3D943AE118F325260099BA15 = {
+			isa = PBXGroup;
+			children = (
+				3D3AB23A18F7423000A64F1E /* main.m */,
+				3D3AB24218F7423000A64F1E /* RosterAppAppDelegate.h */,
+				3D3AB24318F7423000A64F1E /* RosterAppAppDelegate.m */,
+				3D3AB23118F7423000A64F1E /* Main.storyboard */,
+				3D3AB23318F7423000A64F1E /* DataSource.h */,
+				3D3AB23418F7423000A64F1E /* DataSource.m */,
+				3D3AB24418F7423000A64F1E /* RosterAppViewController.h */,
+				3D3AB24518F7423000A64F1E /* RosterAppViewController.m */,
+				3D3AB23E18F7423000A64F1E /* PersonCell.h */,
+				3D3AB23F18F7423000A64F1E /* PersonCell.m */,
+				3D3AB25218F7429100A64F1E /* DetailViewController.h */,
+				3D3AB23518F7423000A64F1E /* DetailViewController.m */,
+				3D3AB23C18F7423000A64F1E /* Person.h */,
+				3D3AB23D18F7423000A64F1E /* Person.m */,
+				3D3AB23018F7423000A64F1E /* Base.lproj */,
+				3D3AB23618F7423000A64F1E /* en.lproj */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D943AE918F325260099BA15 /* Roster App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D943B1C18F325260099BA15 /* Build configuration list for PBXNativeTarget "Roster App" */;
+			buildPhases = (
+				3D943AE618F325260099BA15 /* Sources */,
+				3D943AE718F325260099BA15 /* Frameworks */,
+				3D943AE818F325260099BA15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Roster App";
+			productName = "Roster App";
+			productReference = 3D943AEA18F325260099BA15 /* Roster App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D943B0A18F325260099BA15 /* Roster AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D943B1F18F325260099BA15 /* Build configuration list for PBXNativeTarget "Roster AppTests" */;
+			buildPhases = (
+				3D943B0718F325260099BA15 /* Sources */,
+				3D943B0818F325260099BA15 /* Frameworks */,
+				3D943B0918F325260099BA15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D943B1118F325260099BA15 /* PBXTargetDependency */,
+			);
+			name = "Roster AppTests";
+			productName = "Roster AppTests";
+			productReference = 3D943B0B18F325260099BA15 /* Roster AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D943AE218F325260099BA15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RosterApp;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Cole Bratcher";
+				TargetAttributes = {
+					3D943B0A18F325260099BA15 = {
+						TestTargetID = 3D943AE918F325260099BA15;
+					};
+				};
+			};
+			buildConfigurationList = 3D943AE518F325260099BA15 /* Build configuration list for PBXProject "Roster App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D943AE118F325260099BA15;
+			productRefGroup = 3D943AE118F325260099BA15;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D943AE918F325260099BA15 /* Roster App */,
+				3D943B0A18F325260099BA15 /* Roster AppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D943AE818F325260099BA15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3AB24C18F7423000A64F1E /* PeopleRoster.plist in Resources */,
+				3D3AB24A18F7423000A64F1E /* Images.xcassets in Resources */,
+				3D3AB24618F7423000A64F1E /* Main.storyboard in Resources */,
+				3D3AB24F18F7423000A64F1E /* Roster App-Info.plist in Resources */,
+				3D3AB24918F7423000A64F1E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D943B0918F325260099BA15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D943AE618F325260099BA15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3AB24E18F7423000A64F1E /* PersonCell.m in Sources */,
+				3D3AB25018F7423000A64F1E /* RosterAppAppDelegate.m in Sources */,
+				3D3AB24718F7423000A64F1E /* DataSource.m in Sources */,
+				3D3AB24B18F7423000A64F1E /* main.m in Sources */,
+				3D3AB24D18F7423000A64F1E /* Person.m in Sources */,
+				3D3AB24818F7423000A64F1E /* DetailViewController.m in Sources */,
+				3D3AB25118F7423000A64F1E /* RosterAppViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D943B0718F325260099BA15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D943B1118F325260099BA15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D943AE918F325260099BA15 /* Roster App */;
+			targetProxy = 3D943B1018F325260099BA15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D3AB23118F7423000A64F1E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D3AB23218F7423000A64F1E /* Base */,
+			);
+			name = Main.storyboard;
+			path = "../../../../Downloads/Roster-master/Base.lproj";
+			sourceTree = "<group>";
+		};
+		3D3AB23718F7423000A64F1E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D3AB23818F7423000A64F1E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D943B1A18F325260099BA15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D943B1B18F325260099BA15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D943B1D18F325260099BA15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Roster App/Roster App-Prefix.pch";
+				INFOPLIST_FILE = "Roster App/Roster App-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D943B1E18F325260099BA15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Roster App/Roster App-Prefix.pch";
+				INFOPLIST_FILE = "Roster App/Roster App-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3D943B2018F325260099BA15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Roster App.app/Roster App";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Roster App/Roster App-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Roster AppTests/Roster AppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3D943B2118F325260099BA15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Roster App.app/Roster App";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Roster App/Roster App-Prefix.pch";
+				INFOPLIST_FILE = "Roster AppTests/Roster AppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D943AE518F325260099BA15 /* Build configuration list for PBXProject "Roster App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D943B1A18F325260099BA15 /* Debug */,
+				3D943B1B18F325260099BA15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D943B1C18F325260099BA15 /* Build configuration list for PBXNativeTarget "Roster App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D943B1D18F325260099BA15 /* Debug */,
+				3D943B1E18F325260099BA15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D943B1F18F325260099BA15 /* Build configuration list for PBXNativeTarget "Roster AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D943B2018F325260099BA15 /* Debug */,
+				3D943B2118F325260099BA15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D943AE218F325260099BA15 /* Project object */;
+}
